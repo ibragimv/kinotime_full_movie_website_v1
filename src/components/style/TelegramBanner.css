@@ -1,0 +1,65 @@
+.telegram-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    background-color: rgb(34, 34, 34);
+    padding: 10px 20px;
+    border: 1px solid rgb(65, 65, 65);
+    color: rgba(255, 255, 255, 0.979);
+    font-size: 30px;
+    border-radius: 1px;
+  }
+  
+  .telegram-banner:hover {
+    color: white;
+  }
+  
+  @media (max-width: 1024px) {
+    .telegram-banner {
+      width: 90%;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .telegram-banner {
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      font-size: 15px;
+      margin-left: -0.5px;
+      margin-top: -50px;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .telegram-banner {
+      width: 96%;
+      font-size: 20px;
+      padding: 8px 12px;
+      margin: 0 auto;
+      border-radius: 5px;
+      margin-top: -3px;
+    }
+  }
+  
+  /* === LIGHT MODE: telegram-banner === */
+body.light-mode .telegram-banner {
+  background-color: #f0f0f0;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+body.light-mode .telegram-banner:hover {
+  color: #000;
+}

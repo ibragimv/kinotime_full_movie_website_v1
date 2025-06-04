@@ -1,0 +1,62 @@
+.tv-detail-container {
+    max-width: 1330px;
+    margin: 0 auto;
+    color: white;
+    margin-top: 35px;
+  }
+  
+  .tv-detail-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+
+  .tv-description {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .tv-categories {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tv-category {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .tv-player-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1330px;
+    height: 500px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #000;
+  }
+
+  .tv-header img {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  .tv-header h2 {
+    color: #fffffff5;
+  }
+
+  .category-sec-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  

@@ -1,0 +1,20 @@
+.movie-description-box {
+    margin-top: 100px;
+  }
+
+  .title-txt {
+    font-size: 27px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.801);
+    margin-top: 50px;
+  }
+   
+  @media (max-width: 768px) {
+    .movie-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+ body.light-mode .related-movie-section{
+    padding: 0;
+ }

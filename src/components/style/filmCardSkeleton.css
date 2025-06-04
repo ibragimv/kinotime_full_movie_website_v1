@@ -1,0 +1,72 @@
+.skeleton-card {
+    /* background: #2a2a2a; */
+    border-radius: 20px;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .skeleton-poster {
+    height: 220px;
+    width: 100%;
+    border-radius: 20px;
+    background: #444;
+  }
+  
+  .skeleton-text {
+    padding: 12px;
+  }
+  
+  .skeleton-title {
+    height: 16px;
+    width: 70%;
+    background: #444;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .skeleton-subtitle {
+    height: 12px;
+    width: 40%;
+    background: #444;
+    border-radius: 6px;
+  }
+  
+  /* shimmer effect */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.15) 50%,
+      rgba(255,255,255,0) 100%
+    );
+    animation: shimmer 1.2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      left: -150px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skeleton-poster {
+        height: 165px;
+    }
+}

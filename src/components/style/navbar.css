@@ -1,0 +1,304 @@
+.navbar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  box-sizing: border-box;
+  z-index: 999;
+  position: relative;
+  flex-wrap: wrap;
+  background: transparent;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo span {
+  color: #c300ff;
+  font-weight: bold;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+  position: relative;
+  max-width: 550px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #383838;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.search-box input {
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: rgb(230, 230, 230);
+  cursor: pointer;
+}
+
+.filter-btn {
+  background-color: #383838;
+  color: rgb(230, 230, 230);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #2b2b2b;
+}
+
+.login-btn {
+  background-color: #383838;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 150px;
+}
+
+.login-btn:hover {
+  background-color: #2b2b2b;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 91%;
+  backdrop-filter: blur(40px);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+  margin-top: 5px;
+}
+
+.result-item {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.result-item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.result-poster {
+  width: 40px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.search-result-movie-name {
+  margin-left: 10px;
+}
+
+.arrow-right {
+  position: absolute;
+  right: 15px;
+  font-size: 14px;
+  color: #ccc;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 1px 12px;
+  }
+
+  .navbar-left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  .navbar-logo {
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .navbar-center {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+  }
+
+  .search-box {
+    flex: 1;
+  }
+
+  .filter-btn {
+    padding: 9px 12px;
+  }
+
+  .navbar-right {
+    width: 100%;
+  }
+
+  .login-btn {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 6px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 36px;
+    line-height: 1;
+    gap: 6px;
+  }
+
+  .menu-toggle svg {
+    font-size: 16px;
+  }
+  .search-results{
+    width: 100%;
+  }
+}
+
+/* ====== LIGHT MODE: NAVBAR ====== */
+body.light-mode .navbar-container {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+body.light-mode .navbar-logo {
+  color: #000;
+}
+
+body.light-mode .navbar-logo span {
+  color: #7a00cc;
+}
+
+/* Qidiruv box */
+body.light-mode .search-box {
+  background-color: #cacaca;
+}
+
+body.light-mode .search-box input {
+  color: #000;
+}
+
+/* Qidiruv tugmasi */
+body.light-mode .search-btn {
+  color: #333;
+}
+
+/* Filter tugmasi */
+body.light-mode .filter-btn {
+  background-color: #cacaca;
+  color: #111;
+}
+
+
+/* Login tugmasi */
+body.light-mode .login-btn {
+  background-color: #cacaca;
+  color: #000;
+}
+
+body.light-mode .login-btn:hover {
+  background-color: #afafaf;
+}
+
+/* Natijalar qutisi */
+body.light-mode .search-results {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+body.light-mode .result-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+body.light-mode .result-item:hover {
+  background-color: #eeeeee;
+}
+
+body.light-mode .arrow-right {
+  color: #666;
+}
+
+/* Menu toggle button */
+body.light-mode .menu-toggle {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: #000;
+}

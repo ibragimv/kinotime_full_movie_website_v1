@@ -1,0 +1,94 @@
+.notfound-wrapper {
+  width: 100%;
+  max-width: 1320px;
+  margin: 50px auto 0;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.notfound-icon {
+  color: #ffffffd7;
+  animation: bounce 1.2s infinite;
+  margin-bottom: 10px;
+}
+
+.notfound-message {
+  font-size: 25px;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.notfound-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 15px;
+  background-color: #a200ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.notfound-button:hover {
+  background-color: #a200ffec;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ✅ Responsive: planshetlar */
+@media (max-width: 768px) {
+  .notfound-wrapper {
+    padding: 30px 20px;
+    margin: 30px auto 0;
+  }
+
+  .notfound-message {
+    font-size: 20px;
+  }
+
+  .notfound-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* ✅ Responsive: telefonlar */
+@media (max-width: 480px) {
+  .notfound-message {
+    font-size: 28px;
+  }
+
+  .notfound-icon svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .notfound-button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
+
+body.light-mode .notfound-icon svg {
+  color: #6d6d6d;
+}
+
+body.light-mode .notfound-message {
+  color: #383838;
+}

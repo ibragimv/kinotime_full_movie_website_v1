@@ -1,0 +1,125 @@
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Asosiy container */
+.developing-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 60px auto 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+
+/* Ichki quti */
+.developing-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: zoomIn 0.6s ease;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Ikonalar */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 60px;
+  padding: 20px;
+  border-radius: 50%;
+  color: white;
+  animation: pulse 2s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: rotate(15deg) scale(1.2);
+}
+
+/* Rangi */
+.wrench {
+  background-color: #9c27b0;
+}
+.gear {
+  background-color: #03a9f4;
+}
+.clock {
+  background-color: #ff8800d3;
+}
+
+/* Xabar */
+.message {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+  animation: fadeInUp 1s ease;
+}
+
+
+@media (max-width: 768px) {
+  .developing-container {
+    padding: 20px;
+    margin-top: 40px;
+    min-height: 60vh;
+  }
+
+  .developing-box {
+    padding: 30px 20px;
+  }
+
+  .icon {
+    font-size: 48px;
+    padding: 16px;
+  }
+
+  .message {
+    font-size: 18px;
+  }
+}

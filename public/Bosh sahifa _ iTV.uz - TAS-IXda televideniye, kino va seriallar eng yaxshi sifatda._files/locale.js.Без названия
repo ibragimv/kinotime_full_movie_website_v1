@@ -1,0 +1,40 @@
+(() => {
+  let persistedLocale = localStorage.getItem('itv:lng');
+
+  if (!persistedLocale) {
+    return;
+  }
+
+  const { origin, pathname, search } = window?.location;
+
+  const [locale] = pathname?.slice(1).split('/');
+  const AVAILABLE_LOCALES = ['ru', 'uz', 'en'];
+
+  const isLocaleExplicitlySet = AVAILABLE_LOCALES.includes(locale);
+
+  if (isLocaleExplicitlySet) {
+    persistedLocale = locale;
+  }
+
+  const DEFAULT_LOCALE = 'uz';
+
+  const requestedLocale = isLocaleExplicitlySet ? locale : DEFAULT_LOCALE;
+
+  const isLocaleAdjustmentRequired = requestedLocale !== persistedLocale;
+
+  if (!isLocaleAdjustmentRequired) {
+    return;
+  }
+
+  const shouldWithdrawLocale = persistedLocale === DEFAULT_LOCALE;
+
+  if (shouldWithdrawLocale) {
+    return window.location.replace(`${origin}/${pathname.slice(4)}${search}`);
+  }
+
+  const shouldInjectLocale =
+    persistedLocale !== DEFAULT_LOCALE && requestedLocale === DEFAULT_LOCALE;
+  if (shouldInjectLocale) {
+    window.location.replace(`${origin}/${persistedLocale}/${pathname.slice(1)}${search}`);
+  }
+})();

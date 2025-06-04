@@ -1,0 +1,1 @@
+importScripts('https://feldot.com/v1/sw-import.js?h=waWQiOjEyMDIxNjIsInNpZCI6MTUxNDcwNCwid2lkIjo3MTI0NjEsInNyYyI6MiwicG0iOjAsIm10IjowfQ==eyJ&d=kinotime.world');

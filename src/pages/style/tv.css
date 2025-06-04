@@ -1,0 +1,59 @@
+/* TV Page container */
+.tv-page {
+    max-width: 1130px;
+    margin: 0 auto;
+    margin-top: 35px;
+  }
+  
+  /* Category buttons row */
+  .category-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  
+  /* Individual category button */
+  .category-button {
+    padding: 8px 16px;
+    background-color: #313131;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.89);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .category-button:hover {
+    background-color: #3f3f3f;
+    color: white;
+  }
+  
+  .category-button.active {
+    background-color: #aa02f8;
+    color: #fff;
+    border-color: #aa02f8;
+  }
+  
+  /* Grid for channel cards */
+  .tv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+  
+  /* Empty text style */
+  .empty-text {
+    grid-column: span 4;
+    text-align: left;
+    color: #999;
+    font-size: 15px;
+    font-style: italic;
+  }
+  .tv-page-title-text {
+    font-size: 27px;
+    color: white;
+    padding-bottom: 10px;
+  }

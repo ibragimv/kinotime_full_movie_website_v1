@@ -1,0 +1,113 @@
+.slider-container-1{
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Arrow tugmalar */
+.custom-arrow-right,
+.custom-arrow-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+  padding: 20px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-arrow-right:hover,
+.custom-arrow-left:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.custom-arrow-right {
+  right: -15px;
+}
+
+.custom-arrow-left {
+  left: -15px;
+}
+
+/* Slider header (title va button qatori) */
+.slider-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.slider-title {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+}
+
+.see-all-button {
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.see-all-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* === RESPONSIVE: Planshet va telefonlar uchun === */
+@media (max-width: 992px) {
+  .slider-container-1 {
+    padding: 0 15px;
+  }
+
+  .custom-arrow-right,
+  .custom-arrow-left {
+    padding: 16px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container-1 {
+    padding: 0 12px;
+  }
+
+  .slider-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .see-all-button {
+    align-self: flex-start;
+  }
+
+  .custom-arrow-right,
+  .custom-arrow-left {
+    display: none;
+  }
+}
+.pop {
+  padding: 0;
+  margin: 0;
+}

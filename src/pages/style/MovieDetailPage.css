@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.movie-detail-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.movie-poster-block {
+  position: relative;
+  width: 240px;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  flex-shrink: 0;
+}
+
+.poster-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+.episode-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.movie-info-block {
+  border-radius: 12px;
+  padding-left: 20px;
+  flex: 1;
+}
+
+.movie-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.movie-subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.watch-btn {
+  background: #8000ffb4;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.watch-btn:hover {
+  background: #8000fff1;
+}
+
+.favorite-btn {
+  background: #a200ffc5;
+}
+
+.favorite-btn:hover {
+  background: #a200fff5;
+}
+
+.movie-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-size: 15px;
+}
+
+.movie-meta span {
+  color: #aaa;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.genre-badge {
+  background: #444;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin: 3px;
+  white-space: nowrap;
+  transition: all ease-in-out 0.3s;
+}
+
+.genre-badge:hover {
+  background: #5c5b5b;
+  color: white;
+}
+
+.rating-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.kp-rating, .imdb-rating {
+  background: #333;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: -25px;
+}
+
+.kp-rating {
+  color: #ffb800;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.imdb-rating {
+  color: #ffbd43;
+  cursor: pointer;
+}
+
+.movie-description-box {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ccc;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.movie-description-box h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#player {
+  width: 100%;
+  margin-top: -5px;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 768px) {
+  .movie-detail-wrapper {
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 0;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .movie-poster-block {
+    width: 200px;
+    aspect-ratio: 2 / 3;
+    margin-bottom: 20px;
+  }
+
+  .poster-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .movie-info-block {
+    padding: 0px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .movie-title {
+    font-size: 24px;
+    word-break: break-word;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .watch-btn {
+    padding: 10px 16px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .genre-badge {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+
+  .movie-meta {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #player {
+    margin-top: -10px;
+  }
+}
+
+/* ====== LIGHT MODE: MOVIE DETAIL ====== */
+body.light-mode .movie-detail-wrapper {
+  color: #111;
+}
+
+body.light-mode .movie-title {
+  color: #000;
+}
+
+body.light-mode .movie-subtitle {
+  color: #666;
+}
+
+body.light-mode .watch-btn {
+  background: #d1c4e9;
+  color: #000;
+}
+
+body.light-mode .watch-btn:hover {
+  background: #b39ddb;
+}
+
+body.light-mode .favorite-btn {
+  background: #e1bee7;
+}
+
+body.light-mode .favorite-btn:hover {
+  background: #ce93d8;
+}
+
+body.light-mode .movie-meta span {
+  color: #444;
+}
+
+body.light-mode .genre-badge {
+  background: #e0e0e0;
+  color: #222;
+}
+
+body.light-mode .genre-badge:hover {
+  background: #ccc;
+  color: #000;
+}
+
+body.light-mode .kp-rating,
+body.light-mode .imdb-rating {
+  background: #f5f5f5;
+}
+
+body.light-mode .kp-rating {
+  color: #ff9800;
+}
+
+body.light-mode .imdb-rating {
+  color: #ffb74d;
+}
+
+body.light-mode .movie-description-box {
+  color: #333;
+}
+
+body.light-mode .movie-description-box h3 {
+  color: #111;
+}

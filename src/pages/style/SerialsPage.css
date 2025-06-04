@@ -1,0 +1,199 @@
+/* === Asosiy containerlar uchun === */
+.movies-container,
+.serials-container {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 50px;
+}
+
+.movies-title,
+.serials-title {
+  font-size: 27px;
+  color: white;
+}
+
+/* === Grid tartibi === */
+.movies-grid,
+.serials-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 15px;
+}
+
+/* Planshet */
+@media (max-width: 992px) {
+  .movies-container,
+  .serials-container {
+    padding-left: 0;
+    padding: 30px 15px;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .serials-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Telefon */
+@media (max-width: 768px) {
+  .movies-container,
+  .serials-container {
+    padding-left: 20px;
+  }
+
+  .movies-grid,
+  .serials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* === Pagination === */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: #2b2b2b;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 8px 17px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #444;
+}
+
+.pagination button.active {
+  background-color: #8c00ff;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.pagination .dots {
+  padding: 8px 14px;
+  color: #aaa;
+  font-weight: bold;
+}
+
+.serials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* React Select custom width */
+.filters .dropdown__control {
+  background-color: #1a1a1a;
+  border: 1px solid #8000ff;
+  color: white;
+  min-width: 180px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.filters .dropdown__single-value {
+  color: white;
+}
+
+.filters .dropdown__input {
+  color: white;
+}
+
+.filters .dropdown__menu {
+  z-index: 9999;
+  background-color: #111;
+}
+
+.filters .dropdown__placeholder {
+  color: #aaa;
+}
+
+/* Filtrlash tugmasi */
+.filter-button-1 {
+  background-color: #8000ffe7;
+  color: white;
+  border: none;
+  padding: 7.5px 72px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-button-1:hover {
+  background-color: #7700ffc5;
+}
+
+/* Responsive uslub */
+@media (max-width: 768px) {
+.serials-container{
+  margin-top: 10px;
+}
+  .movies-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .filters .dropdown__control {
+    width: 100%;
+  }
+
+  .filter-button-1 {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.filter-select-1 {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+body.light-mode  .serials-title {
+  color: #000;
+} 
+
+body.light-mode  .pagination button {
+  background-color: #b1b1b1;
+  color: #000;
+}
+body.light-mode  .pagination button:hover{
+  background-color: #919191;
+}
+body.light-mode  .pagination button.active {
+  background-color: #8c00ff;
+  color: white;
+}
